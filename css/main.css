@@ -1,0 +1,90 @@
+/* ================================ *
+ |                                  |
+ |        MAIN CSS TEMPLATE         |
+ |          X-BADGE.COM             |
+ |                                  |
+ |    AUTHORS: Colleen Bernum       |
+ |             Lucian Bor           |
+ |             Sarah Cleveland      |
+ |             Kelly Domerstad      |
+ |                                  |
+ * ================================ */
+
+
+
+
+/* -----------| NAVBAR |----------- */
+.navbar {
+    border-radius: 7px;
+    width: 95%;
+    margin: 1em auto 1em auto;
+}
+
+.navbar-brand {
+    display: none;
+}
+
+/* ------------| FOOTER |----------- */
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+
+/* -----------| CAROUSEL |----------- */
+.carousel {
+    width: 90%;
+    margin: auto;
+}
+
+.carousel-inner {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+    min-height:200px;
+}
+
+/* -----------| JUMBOTRON |----------- */
+ .jumbotron {
+    display: block;
+    margin-bottom: 0;
+    margin-top: 25px;
+    background-color: #fff;
+    padding: 0;
+}
+
+/* -----------| SMALLER THAN 767px |----------- */
+@media (max-width:767px) {
+    .navbar-brand {
+        display: inline-block;
+    }
+}
+
+/* -----------| SMALLER THAN 600px |----------- */
+@media (max-width: 600px) {
+    .jumbotron {
+        display: none;
+    }
+
+    .carousel {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .navbar {
+        width: 100%;
+        margin-top: 0;
+        border-radius: 0;
+    }
+
+    .navbar-brand {
+        display: inline-block;
+    }
+
+    .carousel-caption {
+        display: none; 
+    }
+}
+
