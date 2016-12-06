@@ -15,9 +15,73 @@
 
 /* -----------| NAVBAR |----------- */
 .navbar {
-    border-radius: 7px;
     width: 95%;
     margin: 1em auto 1em auto;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    box-shadow: 3px 3px 3px #000000;
+    -webkit-box-shadow: 3px 3px 3px #000000;
+    -moz-box-shadow: 3px 3px 3px #000000;
+    background: #E37E71;
+    border: solid 1px #e37e71;
+}
+
+.navbar-nav>li>a,
+.navbar-right>li>a {
+    font-weight: bold;
+    font-family: arial;
+    font-style: normal;
+    font-size: 18px;
+    color: #FFFFFF !important;
+    padding: 10px 20px 10px 20px;
+    margin: 10px 5px 6px 5px;
+    line-height: 100%;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    text-shadow: 2px 2px 3px #80473f;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-nav>.dropdown>a:focus,
+.navbar-nav>.dropdown>a:hover,
+.navbar-nav>li>a:hover,
+.navbar-nav>li>a:focus {
+    background: #B3DB9A !important;
+    color: #FFFFFF !important;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    text-shadow: 2px 2px 3px #5e7351;
+}
+
+.dropdown-menu {
+    border: solid 1px #B4B4B4;
+    border-radius: 8px !important;
+    color: #FFFFFF !important;
+    text-shadow: 2px 2px 3px #80473f;
+    background: #8FE7F2;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-box-shadow: 2px 2px 3px #222222;
+    -moz-box-shadow: 2px 2px 3px #222222;
+    box-shadow: 2px 2px 3px #222222;
+}
+
+.dropdown-menu>li>a,
+.dropdown-menu>li>a:hover {
+    background: none;
+    color: #FFFFFF;
+    font-weight:bold;
+    font-size: inherit;
+}
+
+.dropdown-menu:hover,
+.dropdown-menu>li>a:hover {
+    background: #B3DB9A !important;
 }
 
 .navbar-brand {
@@ -59,6 +123,31 @@ footer {
 @media (max-width:767px) {
     .navbar-brand {
         display: inline-block;
+        font-weight: bold;
+        font-family: arial;
+        font-style: normal;
+        font-size: 18px;
+        color: #FFFFFF !important;
+        text-shadow: 2px 2px 3px #80473f;
+    }
+    
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+        color: #FFFFFF !important;
+    }
+    
+    .navbar-inverse .navbar-toggle,
+    .navbar-inverse .navbar-toggle:active {
+        border-color: #e37e71 !important;
+        border-radius: 8px;
+    }
+
+    .navbar-inverse button.navbar-toggle:hover {
+        background: #B3DB9A;
+        border-color: #B3DB9A;
+    }
+    
+    .navbar-inverse .navbar-collapse {
+        border-color: #e37e71;
     }
 }
 
