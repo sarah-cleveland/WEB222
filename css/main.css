@@ -11,7 +11,9 @@
  * ================================ */
 
 
-
+body {
+    font-size: 16px;
+}
 
 /* -----------| NAVBAR |----------- */
 .navbar {
@@ -117,6 +119,63 @@ footer {
     margin-top: 25px;
     background-color: #fff;
     padding: 0;
+}
+
+/* -----------| REUSABLE |----------- */
+.margin-top {
+    margin-top: 20px;
+}
+.margin-bottom {
+    margin-bottom: 20px;
+}
+.gutters {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.clearfix {
+    clear: both;
+}
+.float-right {
+    float: right;
+}
+.inset {
+    float: none;
+    clear: both;
+    margin: 0 auto;
+}
+.txt-red {
+    color: #CC0000;
+}
+.txt-green {
+    color: #73d675;
+}
+
+/* -----------| PRODUCTS |----------- */
+.panel-badge {
+    border: 1px solid #8fe7f1;
+}
+
+.panel-badge--heading {
+    background-color: #8fe7f1;
+    border: 1px solid #8fe7f1;
+}
+
+.panel-badge-pin {
+    border: 1px solid #e2ba74;
+}
+
+.panel-badge-pin--heading {
+    background-color: #e2ba74;
+    border: 1px solid #e2ba74;
+}
+
+.panel-badge-kit {
+    border: 1px solid #b3db9a;
+}
+
+.panel-badge-kit--heading {
+    background-color: #b3db9a;
+    border: 1px solid #b3db9a;
 }
 
 /* -----------| SMALLER THAN 767px |----------- */
