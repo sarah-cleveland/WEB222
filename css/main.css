@@ -26,6 +26,8 @@ body {
     -webkit-box-shadow: 0px 3px 3px #000000;
     -moz-box-shadow: 0px 3px 3px #000000;
     background: #E37E71;
+    background-image: url(../img/pinkfelt.jpg);
+    background-repeat: repeat;  
     border: solid 1px #e37e71;
 }
 
@@ -113,6 +115,8 @@ footer {
     margin-top: 20px;
     margin-bottom: 0;
     background-color: #8fe7f1;
+    background-image: url(../img/bluefabric.jpg);
+    background-repeat: repeat;
     padding:20px;
     -webkit-border-radius: 15px 15px 0px 0px;
     -moz-border-radius: 15px 15px 0px 0px;
