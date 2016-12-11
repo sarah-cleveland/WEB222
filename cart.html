@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>X-Badge Cart</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="./js/shopping cart display item.js"></script>
+  
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+        table{
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            border-collapse: separate;
+            box-shadow: 5px 5px 5px lightgray;
+            text-align: center;
+        }
+        table input {
+            text-align: right;
+        }
+  </style>
+
+  
+</head>
+<body>
+    
+<div class="jumbotron">
+  <div class="container text-center" id="bannerback">
+      <img src="img/XbadgeLogoWide.png" alt="X-Badge Logo" height="250"/>     
+  </div>
+</div>
+    
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/">X-Badge.com</a>  
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">   
+<div class="jumbotron">
+    <h1>Your Cart</h1>
+</div>
+<div><br></div>
+<div class="col-md-12">
+    <table class="table table-striped table-bordered table-hover" style="" >
+        <tr>
+            <th>Item</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th style="text-align: center"><a href="./index.html"><button class="btn btn-danger">Continue Shopping</button></a></th>
+        </tr>
+        <script type="text/javascript">
+            showOrder()
+        </script>
+    </table>        
+</div>
+</div> 
+
+
+<!------------ FOOTER ------------>
+
+<footer class="container-fluid text-center"> 
+  <br><form class="form-inline">Get the newsletter:
+    <input type="email" class="form-control" size="50" placeholder="Email Address">
+    <button type="button" class="btn btn-danger">Sign Up</button>
+    <span><br><br>Copyright X-Badge Team 2016</span> 
+  </form>
+</footer>
+
+</body>
+</html>

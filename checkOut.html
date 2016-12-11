@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>X-Badge</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="./js/shopping cart display item.js"></script>
+  
+  <link rel="stylesheet" href="css/main.css">
+  
+
+  
+</head>
+<body>
+    
+<div class="jumbotron">
+  <div class="container text-center" id="bannerback">
+      <img src="img/XbadgeLogoWide.png" alt="X-Badge Logo" height="250"/>     
+  </div>
+</div>
+    
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/">X-Badge.com</a>  
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">    
+<div class="jumbotron">
+    <h1>Check Out Form</h1>
+</div>
+	<div>
+		<br>
+	</div>
+	<div class="col-md-12">
+		<div class="col-md-8">
+			<form id="checkOutForm" action="./thanksForOrder.html">
+				<div class="form-group row">
+				  	<label for="firstName">Fist Name</label>				  
+				    <input class="form-control" type="text" placeholder="Enter first name.." id="firstName" required>
+				</div>
+				<div class="form-group row">
+				  	<label for="lastName">Last Name</label>				  
+				    <input class="form-control" type="text" placeholder="Enter last name.." id="lastName" required>
+				</div>
+				<div class="form-group row">
+				    <label for="exampleInputEmail1">Email address</label>
+				    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+				</div>
+				<div class="form-group row">
+				  	<label for="streetAdd">Street Address</label>				  
+				    <input class="form-control" type="text" placeholder="123 Washington St.." id="streetAdd" required>
+				</div>
+				<div class="form-group row">
+				  	<label for="city">City</label>		  
+				    <input class="form-control" type="text" placeholder="Boston" id="city" required>
+				</div>
+				<div class="form-group row">
+				  	<label for="state" class="col-md-6">State</label>
+				  	<label for="zipCode" class="col-md-6">Zip Code</label>
+					<div class="col-md-6">	  
+				    	<input class="form-control" type="text" placeholder="MI" maxlength="2" id="state" required>
+					</div>
+					<div class="col-md-6">  		  
+				    	<input class="form-control" type="text" placeholder="48123" maxlength="5" id="zipCode" required>
+				    </div>
+				</div>
+				<div class="form-group row">
+				  	<label for="ccard">Credit Card Number</label>	  
+				    <input class="form-control" type="text" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="12" id="ccard" required>
+				    <small>Cards accepted: <strong>Visa, MasterCard, American Express</strong></small>
+				</div>
+				<div class="form-group">
+					<div class="row">
+				    	<label for="exampleSelect1" class="col-md-8">Expiration Date</label>
+				    	<label for="cvvNum" class="col-md-4">CVV Number</label>
+				    </div>
+				    <div class="col-md-4">
+					    <select class="form-control" id="exampleSelect1" required>
+							<option>Month</option>
+						    <option>January</option>
+						    <option>Febuary</option>
+						    <option>March</option>
+						    <option>April</option>
+						    <option>May</option>
+						    <option>June</option>
+						    <option>July</option>
+						    <option>August</option>
+						    <option>September</option>
+						    <option>October</option>
+						    <option>November</option>
+						    <option>December</option>
+					    </select>
+				    </div>
+				    <div class="col-md-4">
+					    <select class="form-control" id="exampleSelect1" required>
+							<option>Year</option>
+						    <option>2016</option>
+						    <option>2017</option>
+						    <option>2018</option>
+						    <option>2019</option>
+						    <option>2020</option>
+						    <option>2021</option>
+						    <option>2022</option>
+						    <option>2023</option>
+						    <option>2024</option>
+						    <option>2025</option>
+						    <option>2026</option>
+						    <option>2027</option>
+					    </select>
+				    </div>
+				    <div class="form-group row col-md-4">	  		  
+				    <input class="form-control" type="text" placeholder="XXX" maxlength="3" id="cvvNum" required>
+				    <small>Three numbers found on the back of a credit card.</small>
+				</div>
+				</div>
+				<button class="btn btn-success" onclick="delProd(0), delProd(1), delProd(2)">Submit Order</button>
+				<button class="btn btn-danger" type="reset">Reset Form</button>	
+			</form>
+			
+		</div>
+		<div class="row col-md-12">
+			<br>
+			<br>
+		</div>
+	</div>
+</div>
+
+
+<!------------ FOOTER ------------>
+
+<footer class="container-fluid text-center"> 
+  <br><form class="form-inline">Get the newsletter:
+    <input type="email" class="form-control" size="50" placeholder="Email Address">
+    <button type="button" class="btn btn-danger">Sign Up</button>
+    <span><br><br>Copyright X-Badge Team 2016</span> 
+  </form>
+</footer>
+
+</body>
+</html>
