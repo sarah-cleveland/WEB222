@@ -9,6 +9,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="./js/shopping_cart_add_item.js"></script>
+<<<<<<< HEAD
+=======
+  <script src="js/register.js"></script>
+>>>>>>> bb3b05bca3edfda08fb1afe3e661ef0861128518
   
   <link rel="stylesheet" href="css/main.css">
   
@@ -31,11 +35,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="/">X-Badge.com</a>  
+      <a class="navbar-brand" href="index.html">X-Badge.com</a>  
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="/">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li class="active"><a href="products.html">Products</a></li>
       </ul>
@@ -48,7 +52,11 @@
 
 <!------------ PRODUCTS PAGE ------------>
 
-<div class="container">    
+<div class="container">
+    
+    <div class="jumbotron headings">
+        <h1>Products</h1>
+    </div>
   <div class="row">
     <div class="col-sm-4">
       <div class="panel panel-badge">
@@ -56,10 +64,11 @@
         <div class="panel-body"><img src="img/products/badge-link.png" class="img-responsive" style="width:100%" alt="Link from The Legend of Zelda Badge"></div>
         <div class="panel-footer">
           <p>
-            In hac habitasse platea dictumst. Mauris porta augue sit amet elit pulvinar porttitor. Pellentesque habitant morbi tristique senectus et netus.
+              Link, from the Legend of Zelda series. Plain badge with a felt backing.<br>
+              1" x 2"
           </p>
 
-          <h4>$9.99</h4>
+          <h4>$5.99</h4>
 
           <div class="input-group">
             <span class="input-group-btn">
@@ -77,14 +86,19 @@
         <div class="panel-body"><img src="img/products/badge-ghost.png" class="img-responsive" style="width:100%" alt="PAC-MAN Ghost Iron on Badge"></div>
         <div class="panel-footer">
           <p>
-            Suspendisse condimentum sagittis neque, ut ultrices felis fermentum at. Curabitur gravida dui a nisl lobortis tincidunt. Cras tristique ligula erat.
+              "Inky" from the PAC-MAN series. Badge with an iron-on backing and pin.<br>
+              1" x 1"
           </p>
 
-          <h4>$12.99</h4>
+          <h4>$6.99</h4>
 
           <div class="input-group">
             <span class="input-group-btn">
+<<<<<<< HEAD
             <button class="btn btn-danger" onclick="placeOrder('Ghost Badge', './img/products/badge-ghost.png', '5.99', 1)" type="button">Add To Cart</button>
+=======
+            <button class="btn btn-danger" onclick="placeOrder('Ghost Badge', './img/products/badge-ghost.png', '6.99', 1)" type="button">Add To Cart</button>
+>>>>>>> bb3b05bca3edfda08fb1afe3e661ef0861128518
             </span>
             <input type="text" id="qty1" class="form-control" value="1">
           </div>
@@ -98,14 +112,19 @@
         <div class="panel-body"><img src="img/products/badge-mushroom.png" class="img-responsive" style="width:100%" alt="Mario Mushroom DIY Badge Kit"></div>
         <div class="panel-footer">
           <p>
-            Pellentesque at diam vitae odio eleifend vehicula vel at augue. Fusce aliquam odio at libero imperdiet dignissim. Fusce posuere tellus.
+            Power-up mushroom from the Super Mario Bros. series. DIY badge kit with instructions.
+            Finished size: 1.5" x 1.5"
           </p>
 
           <h4>$4.99</h4>
 
           <div class="input-group">
             <span class="input-group-btn">
+<<<<<<< HEAD
             <button class="btn btn-danger" onclick="placeOrder('Mushroom Badge', './img/products/badge-mushroom.png', '5.99', 2)" type="button">Add To Cart</button>
+=======
+            <button class="btn btn-danger" onclick="placeOrder('Mushroom Badge', './img/products/badge-mushroom.png', '4.99', 2)" type="button">Add To Cart</button>
+>>>>>>> bb3b05bca3edfda08fb1afe3e661ef0861128518
             </span>
             <input type="text" id="qty2" class="form-control" value="1">
           </div>
@@ -121,11 +140,25 @@
 <!------------ FOOTER ------------>
 
 <footer class="container-fluid text-center"> 
-  <br><form class="form-inline">Get the newsletter:
-    <input type="email" class="form-control" size="50" placeholder="Email Address">
-    <button type="button" class="btn btn-danger">Sign Up</button>
-    <span><br><br>Copyright X-Badge Team 2016</span> 
-  </form>
+    <div class="container contact-form">
+        <div class="col-sm-12 col-md-4 col-lg-4 inset">
+            <form id="reg" name="email_form" onsubmit="reg()" method="get" class="form"><h3>Get the Newsletter</h3>
+                <input type="email" id="email_1" name="email_1" class="form-control" size="50" placeholder="Email Address">
+                <span class="txt-red" id="email_1_error"> </span><br>
+
+                <input type="email" id="email_2" name="email_2" class="form-control" size="50" placeholder="Repeat Email Address">
+                <span class="txt-red" id="email_2_error"> </span><br>
+
+                <input type="text" id="name" name="name" class="form-control" size="50" placeholder="Your Name">
+                <span class="txt-red" id="name_error"> </span><br>
+
+                <button type="button" id="join" name="join" class="btn btn-danger">Sign Up</button>
+                <button class="btn btn-danger" name="reset" type="reset">Reset</button>
+            </form>
+        </div>
+        
+        <small><br>Copyright X-Badge Team 2016</small> 
+    </div>
 </footer>
 
 </body>

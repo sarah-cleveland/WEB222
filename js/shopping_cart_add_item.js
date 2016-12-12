@@ -2,10 +2,15 @@
 	
 Code to place an order, resulting in the creation of a cookie
 Triggered by this HTML event -  onclick="placeOrder('Q517','Cat Collar','7.99',0)"
+<<<<<<< HEAD
 
 Taken from Tutorial 9 of
 Carey, P., & Canovatchel, F. (2006). New Perspectives on Javascript. Boston, MA: Thompson Course Technology.
 
+=======
+Taken from Tutorial 9 of
+Carey, P., & Canovatchel, F. (2006). New Perspectives on Javascript. Boston, MA: Thompson Course Technology.
+>>>>>>> bb3b05bca3edfda08fb1afe3e661ef0861128518
 */
 
 var now = new Date();

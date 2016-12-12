@@ -1,7 +1,10 @@
 /*
 	
 Taken from Tutorial 9 of
+<<<<<<< HEAD
 
+=======
+>>>>>>> bb3b05bca3edfda08fb1afe3e661ef0861128518
 Carey, P., & Canovatchel, F. (2006). New Perspectives on Javascript. Boston, MA: Thompson Course Technology.
 Adapted by: Lucian Bor
 For: X-Badge, Internet Commerce, Baker College Online.
@@ -93,6 +96,12 @@ function showOrder(){
 	  	taxedTotal = totalCost + tax;
 	  	document.write('<tr><th colspan="4" style="text-align: right">Sub Total</th><td>$'+totalCost.toFixed(2)+'</td><td></td>');
 	  	document.write('<tr><th colspan="4" style="text-align: right">Total Sales Tax</th><td>$'+tax.toFixed(2)+'</td><td></td>');
+<<<<<<< HEAD
 	  	document.write('<tr><th colspan="4" style="text-align: right">Total</th><td>$'+taxedTotal.toFixed(2)+'</td><td><a href="./checkOut.html"><button class="btn btn-danger">Check Out</button></a></td>');
 		
 }
+=======
+	  	document.write('<tr><th colspan="4" style="text-align: right">Total</th><td>$'+taxedTotal.toFixed(2)+'</td><td><a href="./checkout.html"><button class="btn btn-danger">Check Out</button></a></td>');
+		
+}
+>>>>>>> bb3b05bca3edfda08fb1afe3e661ef0861128518

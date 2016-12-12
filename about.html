@@ -9,6 +9,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="js/FormValidation.js"></script>
+  <script src="js/register.js"></script>
   
   <link rel="stylesheet" href="css/main.css">
   
@@ -24,33 +25,35 @@
 </div>
     
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="/">X-Badge.com</a>  
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="index.html">X-Badge.com</a>  
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="/">Home</a></li>
-        <li class="active"><a href="about.html">About Us</a></li>
-        <li><a href="products.html">Products</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-      </ul>
-    </div>
-  </div>
 </nav>
 
 <!------------ ABOUT PAGE ------------>
 
 <div class="container margin-bottom">
   <div class="row inset col-sm-12 col-lg-8">
-    <h1>About us</h1>
+    <div class="jumbotron headings">
+        <h1>About Us</h1>
+    </div>
     <p>
       We specialize in crossing sew-on, pin-on, and iron-on patches with cross-stitch patterns. These patches can easily be sewn onto clothing, bags, and other accessories.
     </p>
@@ -64,12 +67,12 @@
   <div class="col-sm-12 col-lg-8 inset">
     <h3>Have a question or idea? Send us a message!</h3>
     <div class="row">
-      <div class="col-sm-12 col-lg-6">
+      <div class="col-sm-12 col-md-6 col-lg-6">
         <h4>First Name<span class="txt-red">*</span></h4>
         <input type="text" class="form-control js-required" name="firstName">
         <div class="error txt-red hidden">Please enter your first name.</div>
       </div>
-      <div class="col-sm-12 col-lg-6">
+      <div class="col-sm-12 col-md-6 col-lg-6">
         <h4>Last Name<span class="txt-red">*</span></h4>
         <input type="text" class="form-control js-required">
         <div class="error txt-red hidden">Please enter your last name.</div>
@@ -77,12 +80,12 @@
     </div>
 
     <div class="row">
-      <div class="col-sm-12 col-lg-6">
+      <div class="col-sm-12 col-md-6 col-lg-6">
         <h4>Email<span class="txt-red">*</span></h4>
         <input type="text" class="form-control js-required" name="email">
         <div class="error txt-red hidden">Please enter your email.</div>
       </div>
-      <div class="col-sm-12 col-lg-6">
+      <div class="col-sm-12 col-md-6 col-lg-6">
         <h4>Phone Number<span class="txt-red">*</span></h4>
         <input type="text" class="form-control js-required" name="phoneNumber">
         <div class="error txt-red hidden">Please enter your phone number.</div>
@@ -106,15 +109,27 @@
 
 <!------------ FOOTER ------------>
 
-<footer class="container-fluid text-center clearfix"> 
-  <br><form class="form-inline">Get the newsletter:
-    <input type="email" class="form-control" size="50" placeholder="Email Address">
-    <button type="button" class="btn btn-danger">Sign Up</button>
-    <span><br><br>Copyright X-Badge Team 2016</span> 
-  </form>
-</footer>
+<footer class="container-fluid text-center"> 
+    <div class="container contact-form">
+        <div class="col-sm-12 col-md-4 col-lg-4 inset">
+            <form id="reg" name="email_form" onsubmit="reg()" method="get" class="form"><h3>Get the Newsletter</h3>
+                <input type="email" id="email_1" name="email_1" class="form-control" size="50" placeholder="Email Address">
+                <span class="txt-red" id="email_1_error"> </span><br>
 
-</body>
+                <input type="email" id="email_2" name="email_2" class="form-control" size="50" placeholder="Repeat Email Address">
+                <span class="txt-red" id="email_2_error"> </span><br>
+
+                <input type="text" id="name" name="name" class="form-control" size="50" placeholder="Your Name">
+                <span class="txt-red" id="name_error"> </span><br>
+
+                <button type="button" id="join" name="join" class="btn btn-danger">Sign Up</button>
+                <button class="btn btn-danger" name="reset" type="reset">Reset</button>
+            </form>
+        </div>
+        
+        <small><br>Copyright X-Badge Team 2016</small> 
+    </div>
+</footer>
 
 <script>
   FormValidation.init({
