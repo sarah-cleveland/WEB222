@@ -11,14 +11,20 @@
  * ================================ */
 
 
-@font-face { font-family: 'Share Tech'; src: url('../fonts/ShareTech.ttf'); }
+@font-face { font-family: 'Source Sans Pro'; src: url('../fonts/SourceSansPro.ttf'); }
 @font-face { font-family: 'Exo2'; src: url('../fonts/Exo2.ttf'); }
+
+html {
+    height: 100%;
+}
 
 body {
     font-size: 16px;
+    font-family: 'Source Sans Pro', arial, sans-serif;
 }
 
-hi, h2, h3, h4 {
+h1, h2, h3, h4 {
+    
     font-family: 'Exo2', Arial, sans-serif;
     font-weight: bold;
 }
@@ -36,7 +42,7 @@ hi, h2, h3, h4 {
     background: #E37E71;
     background-image: url(../img/pinkfelt.jpg);
     background-repeat: repeat;  
-    border: solid 1px #e37e71;
+    border: solid 1px #CC867C;
 }
 
 .navbar-nav>li>a,
@@ -77,6 +83,7 @@ hi, h2, h3, h4 {
 
 /* ------------| FOOTER |----------- */
 footer {
+    font-family: 'Exo2', Arial, sans-serif;
     background-color: #f2f2f2;
     background-image: url(../img/grayfelt.jpg);
     background-repeat: repeat;
@@ -88,10 +95,10 @@ footer {
 .carousel {
     width: 60%;
     margin: auto;
-    border-radius:15px;
-    -webkit-border-radius:15px;
-    -moz-border-radius:15px;
-    -o-border-radius:15px;
+    border-radius:8px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    -o-border-radius:8px;
     border: 4px solid #333;
     overflow: hidden;
 }
@@ -109,10 +116,10 @@ footer {
     margin: auto;
     min-height:200px;
     max-height:400px;
-    border-radius:10px;
-    -webkit-border-radius:10px;
-    -moz-radius:10px;
-    -o-border-radius:10px;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-radius:5px;
+    -o-border-radius:5px;
 }
 
 .carousel-indicators {
@@ -140,6 +147,20 @@ footer {
     box-shadow: 0px 3px 3px #000;
 }
 
+.jumbotron.headings {
+    width: 97%;
+    font-family: 'Exo2', Arial, sans-serif;
+    font-weight: bold;
+    line-height: 100%;
+    color: #fff;
+    text-shadow: 2px 2px 3px #333;
+    padding-top: 0px;
+    padding-bottom: 1px;
+    margin-bottom: 1.5em;
+    background-image: url(../img/feltsquare2.jpg);
+    background-repeat: repeat;
+}
+
 #bannerback {
     background-image: url(../img/feltsquare2.jpg);
     background-repeat: repeat;
@@ -159,6 +180,12 @@ footer {
 
 
 /* -----------| REUSABLE |----------- */
+.btn {
+    font-family: 'Exo2', Arial, sans-serif;
+    text-shadow: 2px 2px 3px #333;
+    letter-spacing: 1px;
+}
+
 .margin-top {
     margin-top: 20px;
 }
@@ -196,6 +223,10 @@ footer {
 
 .txt-green {
     color: #73d675;
+}
+
+.spacer {
+    height: 5em;
 }
 
 /* -----------| PRODUCTS |----------- */
@@ -238,7 +269,7 @@ footer {
 
 /* -----------| CART/CHECKOUT |----------- */
 
-table{
+table {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -254,21 +285,21 @@ table input {
     text-align: right;
 }
 
-.jumbotron.cartheadings {
-    width: 97%;
-    font-family: 'Exo2', Arial, sans-serif;
-    font-weight: bold;
-    line-height: 100%;
-    color: #fff;
-    text-shadow: 2px 2px 3px #333;
-    padding-top: 0px;
-    padding-bottom: 1px;
-    background-image: url(../img/feltsquare2.jpg);
-    background-repeat: repeat;
+table th {
+    font-family: 'Exo2', arial, sans-serif;
+    text-align: center;
+    margin:auto;
 }
+
 
 /* -----------| SMALLER THAN 767px |----------- */
 @media (max-width:767px) {
+    
+    .navbar {
+        margin-bottom:1.5em;
+        z-index: 9999;
+    }
+    
     .navbar-brand {
         display: inline-block;
         font-weight: bold;
@@ -285,7 +316,7 @@ table input {
     
     .navbar-inverse .navbar-toggle,
     .navbar-inverse .navbar-toggle:active {
-        border-color: #e37e71 !important;
+        border-color: #CC867C !important;
         border-radius: 8px;
     }
 
@@ -293,23 +324,34 @@ table input {
     .navbar-inverse button.navbar-toggle:focus,
     .navbar-inverse button.navbar-toggle .active
     {
-        background: #B3DB9A;
-        border-color: #B3DB9A;
+        background: #7A9962;
+        border-color: #7A9962;
     }
-    
+      
     .navbar-inverse .navbar-collapse {
-        border-color: #e37e71;
+        border-color: #CC867C;
+        box-shadow: 0px 3px 3px #000000;
+        -webkit-box-shadow: 0px 3px 3px #000000;
+        -moz-box-shadow: 0px 3px 3px #000000;
     }
-    
+     
     footer button {
         margin-top:10px;
+    }
+    
+    .carousel {
+        margin-top: -1.5em;
     }
 }
 
 /* -----------| SMALLER THAN 600px |----------- */
 @media (max-width: 600px) {
     
-    .container {
+    body {
+        height: 100%;
+    }
+    
+    .container.cart-container {
         width: 100%;
         padding: 0;
         margin: 0;
@@ -322,25 +364,33 @@ table input {
     .col-sm-12.cart {
         padding-left: 0px;
         padding-right: 0px;
+        line-height:120%;
     }
     
     .jumbotron {
         display: none;
     }
     
-    .jumbotron.cartheadings {
+    .jumbotron.headings {
         display: block;
+        margin-bottom: 1.5em;
     }
 
-    .carousel {
+    .carousel, .carousel-inner,
+    .carousel-inner img {
         width: 100%;
-        border-radius: 0;
+        border: none;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -o-border-radius: 0px;
+        border-radius: 0px;
     }
 
     .navbar {
         width: 100%;
         margin-top: 0;
         border-radius: 0;
+        
     }
 
     .navbar-brand {
@@ -349,6 +399,10 @@ table input {
 
     .carousel-caption {
         display: none; 
+    }
+    
+    .footer.container-fluid {
+        bottom: 0;
     }
 }
 
