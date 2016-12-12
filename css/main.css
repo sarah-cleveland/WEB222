@@ -91,6 +91,10 @@ footer {
     border-top: 1px solid #999999;
 }
 
+footer form input {
+    font-family: 'Source Sans Pro', arial, sans-serif;
+}
+
 /* -----------| CAROUSEL |----------- */
 .carousel {
     width: 60%;
@@ -133,7 +137,7 @@ footer {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 0;
-    background-color: #8fe7f1;
+    background-color: #9CD5DB;
     background-image: url(../img/bluefabric.jpg);
     background-repeat: repeat;
     padding:20px;
@@ -229,14 +233,23 @@ footer {
     height: 5em;
 }
 
+.margin-top2 {
+    margin-top: 3em;
+}
+
+.well {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 /* -----------| PRODUCTS |----------- */
 .panel-badge {
-    border: 1px solid #8fe7f1;
+    border: 1px solid #9CD5DB;
 }
 
 .panel-badge--heading {
-    background-color: #8fe7f1;
-    border: 1px solid #8fe7f1;
+    background-color: #9CD5DB;
+    border: 1px solid #9CD5DB;
 }
 
 .panel-badge-pin {
@@ -266,6 +279,18 @@ footer {
     letter-spacing: 1px;
     text-shadow: 2px 2px 3px #333;
 }
+
+.mainpage img {
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    border: 2px solid #999;
+}
+
+.mainpage {
+    padding: 15px;
+    background-color: #EDEDED;
 
 /* -----------| CART/CHECKOUT |----------- */
 
